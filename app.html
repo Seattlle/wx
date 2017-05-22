@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="public/css/swiper.min.css">-->
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Swiper -->
+        <!--<div class="swiper-container">-->
+            <!--<div class="swiper-wrapper">-->
+                <!--<div class="swiper-slide">-->
+                    <!--<div class="swiper-img">-->
+                        <!--<img src="public/images/18512624_808665839299592_1185143697881169920_n.jpg" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="swiper-text">-->
+                        <!--<span>风景风景风景风景风景风景风景</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="swiper-slide">-->
+                    <!--<div class="swiper-img">-->
+                        <!--<img src="public/images/18513084_429934534047742_7878306683405991936_n.jpg" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="swiper-text">-->
+                        <!--<span>风景风景风景风景风景风景风景</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="swiper-slide">-->
+                    <!--<div class="swiper-img">-->
+                        <!--<img src="public/images/18514179_292881041153325_5184885121026621440_n.jpg" alt="">-->
+                    <!--</div>-->
+                    <!--<div class="swiper-text">-->
+                        <!--<span>风景风景风景风景风景风景风景</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; Add Pagination &ndash;&gt;-->
+            <!--<div class="swiper-pagination"></div>-->
+        <!--</div>-->
+        <header class="header">
+            <div class="user-info">
+                <span class="user-head" v-if="userInfo.head!=undefined">
+                    <img v-bind:src="'public/images/'+userInfo.head" alt="头像" >
+                </span>
+                <span class="user-name" v-text="userInfo.name"></span>
+            </div>
+            <div class="user-descript">
+                <p v-text="userInfo.descript"></p>
+            </div>
+        </header>
+        <section id="history">
+            <ul class="ui-list">
+                <li class="listItem " v-for="artical in articalList">
+                    <a v-bind:href="artical.id">
+                        <div class="list-main">
+                            <h3 class="list-title">{{artical.title}}</h3>
+                            <time class="time">{{artical.date}}</time>
+                        </div>
+                        <div class="list-pic">
+                            <img v-bind:src="'public/images/'+artical.img" alt="">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <!--<script src="public/javascript/swiper.min.js"></script>-->
+    <!--<script>-->
+        <!--var swiper = new Swiper('.swiper-container', {-->
+            <!--pagination: '.swiper-pagination',-->
+            <!--paginationClickable: true-->
+        <!--});-->
+    <!--</script>-->
+    <script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <script src="public/javascript/app.js"></script>
+</body>
+</html>

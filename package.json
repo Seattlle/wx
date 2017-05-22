@@ -1,0 +1,15 @@
+{
+  "name": "wxpro",
+  "version": "1.0.0",
+  "description": "公众号文章列表",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "vue": "^2.3.3"
+  }
+}
